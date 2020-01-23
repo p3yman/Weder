@@ -4,7 +4,9 @@
   "description": "A node.js back-end for Weder app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,19 @@
   "bugs": {
     "url": "https://github.com/peyman3d/weder-api/issues"
   },
-  "homepage": "https://github.com/peyman3d/weder-api#readme"
+  "homepage": "https://github.com/peyman3d/weder-api#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.9"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.2",
+    "@types/mongoose": "^5.5.43",
+    "@types/node": "^13.1.8",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  }
 }
