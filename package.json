@@ -1,0 +1,25 @@
+{
+  "name": "weder-api",
+  "version": "1.0.0",
+  "description": "A node.js back-end for Weder app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peyman3d/weder-api.git"
+  },
+  "keywords": [
+    "weather",
+    "node.js",
+    "app",
+    "api"
+  ],
+  "author": "Peyman Eskandari (@peyman3d)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peyman3d/weder-api/issues"
+  },
+  "homepage": "https://github.com/peyman3d/weder-api#readme"
+}
