@@ -1,3 +1,8 @@
+// LOAD ENV FILE
+import dotenv from "dotenv";
+dotenv.config();
+
+// IMPORT APPLICATION
 import app from "./app";
 
 app.listen(3000, () => {
