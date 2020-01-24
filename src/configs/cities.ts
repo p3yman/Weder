@@ -1,5 +1,12 @@
 // List of cities
-export default [
+export interface City {
+  id: number;
+  name: string;
+  country: string;
+  coord: { lon: number; lat: number };
+}
+
+export const cities: City[] = [
   {
     id: 3169070,
     name: "Roma",
