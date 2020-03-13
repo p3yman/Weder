@@ -11,7 +11,8 @@ const updateCity = async (city: { id: any; name: any; coord: any }) => {
       name: city.name,
       coords: city.coord
     };
-    await City.create(record);
+    await City.updateOne({ cityId: city.id }, record, { upsert: true });
+    console.log(`${city.name}'s data updated.`);
   } catch (err) {
     console.log(err);
   }
@@ -34,6 +35,6 @@ for (let i = 1; i <= groups; i++) {
   const scheduleTiming = `${i}-59/${groups} * * * *`;
   jobs[i] = schedule.scheduleJob(scheduleTiming, (): void => {
     console.log(`Updating group ${i} on ${new Date().getMinutes()}`);
-    // update(cities);
+    update(cities);
   });
 }
