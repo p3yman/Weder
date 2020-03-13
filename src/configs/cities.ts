@@ -1,59 +1,16 @@
 // List of cities
-export interface CityData {
-  id: number;
-  name: string;
-  country: string;
-}
-
-export const cities: CityData[] = [
-  {
-    id: 3169070,
-    name: "Roma",
-    country: "IT"
-  },
-  {
-    id: 5128638,
-    name: "New York",
-    country: "US"
-  },
-  {
-    id: 292223,
-    name: "Dubai",
-    country: "AE"
-  },
-  {
-    id: 1609350,
-    name: "Bangkok",
-    country: "TH"
-  },
-  {
-    id: 6455259,
-    name: "Paris",
-    country: "FR"
-  },
-  {
-    id: 1880252,
-    name: "Singapore",
-    country: "SG"
-  },
-  {
-    id: 1733046,
-    name: "Kuala Lumpur",
-    country: "MY"
-  },
-  {
-    id: 1850147,
-    name: "Tokyo",
-    country: "JP"
-  },
-  {
-    id: 112931,
-    name: "Tehran",
-    country: "IR"
-  },
-  {
-    id: 745044,
-    name: "Istanbul",
-    country: "TR"
-  }
+const cities: number[] = [
+  3169070, // Roma, IT
+  5128638, // New York, IT
+  292223, // Dubai, AE
+  1609350, // Bangkok, TH
+  6455259, // Paris, FR
+  1880252, // Singapore, SG
+  1733046, // Kuala Lumpur, MY
+  1850147, // Tokyo, JP
+  112931, // Tehran, IT
+  3169070, // Roma, IT
+  745044 // Istanbul, TR
 ];
+
+export default cities;

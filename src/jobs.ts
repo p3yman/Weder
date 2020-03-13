@@ -2,7 +2,7 @@ import schedule from "node-schedule";
 import fs from "fs";
 import axios from "axios";
 import City from "./models/City";
-import { cities, CityData } from "./configs/cities";
+import cities from "./configs/cities";
 
 const updateCity = async (city: { id: any; name: any; coord: any }) => {
   try {
@@ -17,8 +17,8 @@ const updateCity = async (city: { id: any; name: any; coord: any }) => {
   }
 };
 
-const update = async (cities: CityData[]) => {
-  const ids = cities.map((el): number => el.id).join(",");
+const update = async (cities: number[]) => {
+  const ids = cities.join(",");
   const url = `http://api.openweathermap.org/data/2.5/group?id=${ids}&appid=${process.env.API_KEY}&units=metric`;
   const response = await axios.get(url);
   const { list } = response.data;
@@ -28,7 +28,7 @@ const update = async (cities: CityData[]) => {
 };
 
 const groups: number = Math.ceil(cities.length / 30);
-console.log(groups);
+console.log("Groups count:", groups);
 const jobs: any[] = [];
 for (let i = 1; i <= groups; i++) {
   const scheduleTiming = `${i}-59/${groups} * * * *`;
