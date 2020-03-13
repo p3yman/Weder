@@ -8,9 +8,25 @@ If you're using a paid subscription from OpenWeather, then this application may 
 
 
 
-## 🗓 Roadmap
+## Installation
+#### Via GitHub
+
+* Clone the [GitHub repository](https://github.com/peyman3d/Weder/) : `git clone https://github.com/peyman3d/Weder.git`
+* Or download the [zip file](https://github.com/peyman3d/Weder/archive/master.zip) and extract it.
+* Go to prject folder.
+* Create `.env` file using the template: `cp .env.example .env`
+* Fill the `.env` file with 2 important values:
+    * `DATABASE`: Monogodb database address.
+    * `API_KEY`: A valid OpenWeather API key that you can get from [here](https://openweathermap.org/appid)
+* Install the packages using `npm install`
+* Run the application using `npm start`
+
+
+
+## Roadmap
 - [ ] Add more cities
 - [ ] Add APIs to get data from database
+- [ ] Add npm and yarn install documention
 
 
 
