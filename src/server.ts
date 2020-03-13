@@ -2,6 +2,9 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+// Import Database
+import "./db";
+
 // IMPORT APPLICATION
 import app from "./app";
 
