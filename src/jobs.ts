@@ -1,4 +1,5 @@
-import cron from "node-cron";
+import schedule from "node-schedule";
+import fs from "fs";
 import axios from "axios";
 import City from "./models/City";
 import { cities, CityData } from "./configs/cities";
@@ -26,10 +27,13 @@ const update = async (cities: CityData[]) => {
   });
 };
 
-setTimeout(() => {
-  update(cities);
-}, 3000);
-
-// cron.schedule("* * * * *", (): void => {
-//   update(cities);
-// });
+const groups: number = Math.ceil(cities.length / 30);
+console.log(groups);
+const jobs: any[] = [];
+for (let i = 1; i <= groups; i++) {
+  const scheduleTiming = `${i}-59/${groups} * * * *`;
+  jobs[i] = schedule.scheduleJob(scheduleTiming, (): void => {
+    console.log(`Updating group ${i} on ${new Date().getMinutes()}`);
+    // update(cities);
+  });
+}
