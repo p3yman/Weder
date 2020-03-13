@@ -19,7 +19,7 @@ If you're using a paid subscription from OpenWeather, then this application may 
     * `DATABASE`: monogoDB database address.
     * `API_KEY`: A valid OpenWeather API key that you can get from [here](https://openweathermap.org/appid)
 * Install the packages using `npm install`
-* Run the application using `npm start`
+* Run the application using `npm run dev`
 
 
 
